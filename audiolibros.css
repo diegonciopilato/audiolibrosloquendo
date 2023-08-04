@@ -1,112 +1,228 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <link rel="icon" type="image/png" href="logo.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog - Home</title>
-    <link rel="stylesheet" href="audiolibros.css">
-</head>
-<body>
-    <div class="container">
-        <header class="portada">
-        </header> 
-        <nav class="home">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="libros.html" class="active">Libros</a></li>
-                <li><a href="conversor.html">Conversor</a></li>
-                <li><a href="subir.html">Subir</a></li>
-                <li><a href="peticiones.html">Peticiones</a></li>
-                <li><a href="">   </a></li>
-            </ul>
-        </nav>
+/* Estilos generales */
 
-        <div class="main-content">
-            <div class="book-post">
-                <div class="book-cover">
-                    <img src="libro2.jpg">
-                </div>
-                <div class="book-details">
-                    <h2>Cómo ganar amigos e influir sobre las personas</h2>
-                    <p>
-                        Convertido en un clásico de las relaciones humanas, los sólidos principios enunciados en 
-                        Cómo ganar amigos no han sido aún superados. Aplicando su gran conocimiento de las personas, 
-                        dotes de observación y experiencia profesional.
-                        Carnegie consiguió crear un tratado de psicología cotidiana que es el origen del marketing 
-                        moderno.
-                        <br>
-                        Con más de 15 millones de ejemplares vendidos, Cómo ganar amigos ha ayudado a miles de
-                         personas a alcanzar el éxito en su vida personal y profesional.
-                         <br>
-                         Este libro sólo será susceptible de cambiarte la vida si cumples este requisito mágico: 
-                         “tener un profundo e impulsivo deseo de aprender a aumentar tu capacidad para tratar con los demás”
-                    </p>
-                    <div class="texto2-section">
-                        <div class="audio-section">
-                            <h3>Primera parte</h3>
-                            <h4>Técnicas fundamentales para tratar con el prójimo</h4>
-                            <h4>1. "Si quieres recoger miel, no des puntapies a la colmena"</h4>
-                            <audio controls>
-                                <source src="1-1.mp3" type="audio/mpeg">
-                            </audio>
-                        </div>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(ruta-a-imagen-wallpaper.jpg);
+    background-size: cover;
+    
+}
 
-                        <div class="audio-section">
-                            <h3>motomami</h3>
-                            <audio controls>
-                                <source src="motomami.mp3" type="audio/mpeg">
-                            </audio>
-                        </div>
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    margin: 5px 310px ;
+    border-radius: 10px;
+    position: relative;
+}
 
-                        <div class="audio-section">
-                            <h3>2. El gran secreto para tratar con la gente</h3>
-                            <audio controls>
-                                <source src="2-2.mp3" type="audio/mpeg">
-                            </audio>
-                        </div>
+.header-container {
+    width: 100%; /* Cambia el ancho para que ocupe todo el ancho de la página */
+    padding: 20px;
+}
 
-                        <div class="audio-section">
-                            <h3>3. “Quien puede hacer esto tiene al mundo entero consigo; quien no puede, marcha solo por el camino”</h3>
-                            <audio controls>
-                                <source src="3-3.mp3" type="audio/mpeg">
-                            </audio>
-                        </div>
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: rgba(220, 220, 220, 0.8); /* Plomo suave como fondo del menú */
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center; /* Centra los botones horizontalmente */
+}
 
-                        <div class="audio-section">
-                            <h3>Segunda parte</h3>
-                            <h3>Seis maneras de agradar a los demas</h3>
-                            <audio controls>
-                                <source src="4-4.mp3" type="audio/mpeg">
-                            </audio>
-                        </div>
+nav li {
+    margin-right: 7px; /* Ajusta el espacio entre botones */
+    padding: 0px 46px; /* Espacio interno del botón para centrar el texto */
+    position: relative;
+}
 
-                        <div class="audio-section">
-                            <h3>sexo gay</h3>
-                            <audio controls>
-                                <source src="5-5.mp3" type="audio/mpeg">
-                            </audio>
-                        </div>
-                    </texto2-section>
-                </div>
-            </div>
-        
-            <!-- Otras publicaciones de libros aquí -->
-            
-            <aside class="book-archive">
-                <h3>ARTICLE ARCHIVE</h3>
-                <ul>
-                    <li><a href="clasicos.html">Clásicos</a></li>
-                    <li><a href="biografias.html">Biografías</a></li>
-                    <li><a href="filosofia.html">Filosofía</a></li>
-                    <li><a href="cyf.html">Ciencia y Ficción</a></li>
-                    <li><a href="ciencia.html">Ciencia</a></li>
-                    <li><a href="economia.html">Economía</a></li>
-                </ul>
-            </aside>
-        </div>
-    </div>
+nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Ajusta la posición vertical de la línea */
+    bottom: -10px; /* Ajusta la posición vertical de la línea */
+    right: 0;
+    width: 1px;
+    background-color: gray; /* Plomo suave para la línea vertical */
+}
 
-    <script src="como-ganar-amigos.js"></script>
-</body>
-</html>
+nav a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilos del botón activo (Home) */
+nav a.active {
+    color: white; /* Color blanco para el texto del botón activo */
+    background-color: white; /* Color blanco para el fondo del botón activo */
+    border-radius: 10px;
+}
+
+/* Estilos para los botones no activos */
+nav li:not(:first-child) a {
+    background-color: rgba(255, 255, 255, 0.322); /* Blanco más transparente para el fondo de los botones no activos */
+    border-radius: 10px;
+}
+
+/* Estilos del botón extendido */
+nav li:nth-last-child(2) {
+    margin-right: 302px; /* Alinea el penúltimo botón a la izquierda */
+}
+
+/* Estilos del menú activo */
+nav a.active {
+    padding: 5px 10px;
+}
+
+.main-content {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3px;
+    color: red;
+    max-width: 1200px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.book-post {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px 30px; /* Ajustamos el espacio entre el contenido del libro y el Article Archive */
+    flex: 1; /* Hacemos que el contenido del libro ocupe todo el espacio disponible */
+}
+
+.book-cover {
+
+    margin-left: -10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+ 
+    padding: 30px;
+    width: 250px;
+    height: 1220px;
+    
+}
+
+.book-details {
+    margin-left: -50px; /* Elimina el margen derecho */
+    height: 1214px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+
+  
+    width: calc(100% - 100px); /* Aquí asumí que el ancho del .book-archive es de 200px, si es diferente, ajústalo */
+    padding: 33px;
+}
+
+/* Ajustamos el diseño del contenido del libro */
+.book-details h2 {
+    margin-top: 9px;
+    color: red;
+    text-decoration: none;
+
+    /* background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 para el título */
+    padding: -100px;
+
+    border-radius: 10px;
+}
+
+.texto2-section {
+    position: absolute;
+    margin-top: 9px;
+    top: 713px; /* Ajusta la posición vertical según tus necesidades */
+    left: 30px; /* Ajusta la posición horizontal según tus necesidades */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 10px;
+    padding: 1px 20px; /* Reducir el valor del padding-top a 10px */
+    width: 75%; /* Asegura que la sección ocupe todo el ancho disponible */
+    /* Otros estilos para la sección .texto2-section aquí */
+}
+.audio-section audio {
+    width: 100%; /* Establece el ancho del reproductor al 100% del contenedor */
+    margin-left: -5px; /* Elimina el margen derecho */
+}
+
+
+
+.book-archive {
+    width: 220px; /* Puedes ajustar el ancho del menú según tus preferencias */
+    padding: 20px;
+    color: red;
+    border-radius: 5px;
+    /* Eliminamos el fondo del .book-archive */
+    display: flex; /* Asegura que las secciones se muestren en línea */
+    flex-wrap: wrap; /* Permite que las secciones se ajusten a varias filas si es necesario */
+    justify-content: space-between; 
+    /* Ajusta los márgenes derecho e izquierdo según tus preferencias */
+    margin-left: -23px;
+    margin-right: 43px;
+}
+
+
+.book-archive h3 {
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.book-archive ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-archive li {
+    margin-bottom: 10px;
+}
+
+.book-archive a {
+    text-decoration: none;
+    color: red;
+}
+
+/* Estilos específicos para la página principal */
+
+body.home {
+    background-color: rgba(255, 255, 240, 0.8);
+}
+
+nav.home ul {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+nav.home a.active {
+    background-color: #fff;
+    color: red;
+}
+
+/* Estilos de la portada */
+.portada {
+    width: 100%;
+    height: 209px;
+    background-image: url(ruta-a-imagen-portada.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 0px; /* Eliminamos el margen inferior para reducir el espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+}
