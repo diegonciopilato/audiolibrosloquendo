@@ -1,0 +1,214 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(ruta-a-imagen-wallpaper.jpg);
+    background-size: cover;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    margin: 5px 310px ;
+    border-radius: 10px;
+    position: relative;
+}
+
+.header-container {
+    width: 100%; /* Cambia el ancho para que ocupe todo el ancho de la página */
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: rgba(220, 220, 220, 0.8); /* Plomo suave como fondo del menú */
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+nav li {
+    margin-right: 7px; /* Ajusta el espacio entre botones */
+    padding: 0px 46px; /* Espacio interno del botón para centrar el texto */
+    position: relative;
+}
+
+nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Ajusta la posición vertical de la línea */
+    bottom: -10px; /* Ajusta la posición vertical de la línea */
+    right: 0;
+    width: 1px;
+    background-color: gray; /* Plomo suave para la línea vertical */
+}
+
+nav a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilos del botón activo (Home) */
+nav a.active {
+    color: white; /* Color blanco para el texto del botón activo */
+    background-color: white; /* Color blanco para el fondo del botón activo */
+    border-radius: 10px;
+}
+
+/* Estilos para los botones no activos */
+nav li:not(:first-child) a {
+    background-color: rgba(255, 255, 255, 0.322); /* Blanco más transparente para el fondo de los botones no activos */
+    border-radius: 10px;
+}
+
+/* Estilos del botón extendido */
+nav li:nth-last-child(2) {
+    margin-right: 302px; /* Alinea el penúltimo botón a la izquierda */
+}
+
+/* Estilos del menú activo */
+nav a.active {
+    padding: 5px 10px;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3px;
+    color: red;
+    max-width: 1200px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.book-post {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px 30px; /* Ajustamos el espacio entre el contenido del libro y el Article Archive */
+    flex: 1; /* Hacemos que el contenido del libro ocupe todo el espacio disponible */
+}
+
+.book-cover {
+
+    margin-left: -10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative; /* Añadimos posición relativa para que podamos superponer elementos */
+    z-index: 1; /* Aseguramos que la imagen del libro esté delante del contenido */
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+ 
+    padding: 30px;
+    width: 250px;
+    height: 820px;
+    
+}
+
+.book-details {
+    margin-left: -50px; /* Elimina el margen derecho */
+    height: 814px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+
+  
+    width: calc(100% - 100px); /* Aquí asumí que el ancho del .book-archive es de 200px, si es diferente, ajústalo */
+    padding: 33px;
+}
+
+
+
+/* Ajustamos el diseño del contenido del libro */
+.book-details h2 {
+    margin-top: 4px;
+    color: red;
+    text-decoration: none;
+    transition: color 0.3s;
+    /* background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 para el título */
+    padding: -100px;
+
+    border-radius: 10px;
+}
+
+.book-details h2:hover {
+    color: #c0c000;
+    
+}
+
+.book-archive {
+    width: 220px; /* Puedes ajustar el ancho del menú según tus preferencias */
+    padding: 20px;
+    color: red;
+    border-radius: 5px;
+    /* Eliminamos el fondo del .book-archive */
+    
+    /* Ajusta los márgenes derecho e izquierdo según tus preferencias */
+    margin-left: -23px;
+    margin-right: 43px;
+}
+
+
+.book-archive h3 {
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.book-archive ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-archive li {
+    margin-bottom: 10px;
+}
+
+.book-archive a {
+    text-decoration: none;
+    color: red;
+}
+
+/* Estilos específicos para la página principal */
+
+body.home {
+    background-color: rgba(255, 255, 240, 0.8);
+}
+
+nav.home ul {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+nav.home a.active {
+    background-color: #fff;
+    color: red;
+}
+
+/* Estilos de la portada */
+.portada {
+    width: 100%;
+    height: 209px;
+    background-image: url(ruta-a-imagen-portada.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 0px; /* Eliminamos el margen inferior para reducir el espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+}
