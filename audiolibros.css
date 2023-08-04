@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog - Home</title>
+    <link rel="stylesheet" href="audiolibros.css">
+</head>
+<body>
+    <div class="container">
+        <header class="portada">
+        </header> 
+        <nav class="home">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="libros.html" class="active">Libros</a></li>
+                <li><a href="conversor.html">Conversor</a></li>
+                <li><a href="subir.html">Subir</a></li>
+                <li><a href="peticiones.html">Peticiones</a></li>
+                <li><a href="">   </a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <div class="book-post">
+                <div class="book-cover">
+                    <img src="libro2.jpg">
+                </div>
+                <div class="book-details">
+                    <h2>Cómo ganar amigos e influir sobre las personas</h2>
+                    <p>
+                        Convertido en un clásico de las relaciones humanas, los sólidos principios enunciados en 
+                        Cómo ganar amigos no han sido aún superados. Aplicando su gran conocimiento de las personas, 
+                        dotes de observación y experiencia profesional.
+                        Carnegie consiguió crear un tratado de psicología cotidiana que es el origen del marketing 
+                        moderno.
+                        <br>
+                        Con más de 15 millones de ejemplares vendidos, Cómo ganar amigos ha ayudado a miles de
+                         personas a alcanzar el éxito en su vida personal y profesional.
+                         <br>
+                         Este libro sólo será susceptible de cambiarte la vida si cumples este requisito mágico: 
+                         “tener un profundo e impulsivo deseo de aprender a aumentar tu capacidad para tratar con los demás”
+                    </p>
+                    <div class="texto2-section">
+                        <div class="audio-section">
+                            <h3>Primera parte</h3>
+                            <h4>Técnicas fundamentales para tratar con el prójimo</h4>
+                            <h4>1. "Si quieres recoger miel, no des puntapies a la colmena"</h4>
+                            <audio controls>
+                                <source src="1-1.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+
+                        <div class="audio-section">
+                            <h3>motomami</h3>
+                            <audio controls>
+                                <source src="motomami.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+
+                        <div class="audio-section">
+                            <h3>2. El gran secreto para tratar con la gente</h3>
+                            <audio controls>
+                                <source src="2-2.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+
+                        <div class="audio-section">
+                            <h3>3. “Quien puede hacer esto tiene al mundo entero consigo; quien no puede, marcha solo por el camino”</h3>
+                            <audio controls>
+                                <source src="3-3.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+
+                        <div class="audio-section">
+                            <h3>Segunda parte</h3>
+                            <h3>Seis maneras de agradar a los demas</h3>
+                            <audio controls>
+                                <source src="4-4.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+
+                        <div class="audio-section">
+                            <h3>sexo gay</h3>
+                            <audio controls>
+                                <source src="5-5.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </texto2-section>
+                </div>
+            </div>
+        
+            <!-- Otras publicaciones de libros aquí -->
+            
+            <aside class="book-archive">
+                <h3>ARTICLE ARCHIVE</h3>
+                <ul>
+                    <li><a href="clasicos.html">Clásicos</a></li>
+                    <li><a href="biografias.html">Biografías</a></li>
+                    <li><a href="filosofia.html">Filosofía</a></li>
+                    <li><a href="cyf.html">Ciencia y Ficción</a></li>
+                    <li><a href="ciencia.html">Ciencia</a></li>
+                    <li><a href="economia.html">Economía</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+
+    <script src="como-ganar-amigos.js"></script>
+</body>
+</html>
