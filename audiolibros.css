@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url(ruta-a-imagen-wallpaper.jpg);
-    background-size: cover;
-    
+    background-image: url(como-ganar-amigos.jpg);
+    background-repeat: repeat;
+    background-size: auto;
 }
 
 .container {
@@ -114,27 +114,29 @@ nav a.active {
  
     padding: 30px;
     width: 250px;
-    height: 1220px;
+    height: 4660px;
     
 }
 
 .book-details {
     margin-left: -50px; /* Elimina el margen derecho */
-    height: 1214px;
+
+    height: 4654px;
     color: #333;
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
     border-radius: 10px;
     border-top-left-radius: 0px;
 
   
-    width: calc(100% - 100px); /* Aquí asumí que el ancho del .book-archive es de 200px, si es diferente, ajústalo */
+    width: calc(55% - 100px); /* Aquí asumí que el ancho del .book-archive es de 200px, si es diferente, ajústalo */
     padding: 33px;
 }
 
 /* Ajustamos el diseño del contenido del libro */
 .book-details h2 {
-    margin-top: 9px;
-    color: red;
+    margin-top: 4px;
+    /*color: red;*/
+
     text-decoration: none;
 
     /* background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 para el título */
@@ -152,12 +154,15 @@ nav a.active {
     color: black;
     border-radius: 10px;
     padding: 1px 20px; /* Reducir el valor del padding-top a 10px */
-    width: 75%; /* Asegura que la sección ocupe todo el ancho disponible */
+    width: 68.2%; /* Asegura que la sección ocupe todo el ancho disponible */
     /* Otros estilos para la sección .texto2-section aquí */
 }
 .audio-section audio {
+
     width: 100%; /* Establece el ancho del reproductor al 100% del contenedor */
     margin-left: -5px; /* Elimina el margen derecho */
+    margin-right: -12px; /* Elimina el margen derecho */
+
 }
 
 
@@ -168,11 +173,9 @@ nav a.active {
     color: red;
     border-radius: 5px;
     /* Eliminamos el fondo del .book-archive */
-    display: flex; /* Asegura que las secciones se muestren en línea */
-    flex-wrap: wrap; /* Permite que las secciones se ajusten a varias filas si es necesario */
-    justify-content: space-between; 
+    
     /* Ajusta los márgenes derecho e izquierdo según tus preferencias */
-    margin-left: -23px;
+    margin-left: -33px;
     margin-right: 43px;
 }
 
@@ -182,6 +185,7 @@ nav a.active {
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 
 .book-archive ul {
     list-style: none;
