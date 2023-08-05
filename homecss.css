@@ -220,7 +220,7 @@ nav.home a.active {
     border: none;
 
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1600px) {
     /* Aquí colocas los estilos específicos para dispositivos móviles */
     .container {
      display: flex;
