@@ -23,3 +23,26 @@ bookTitle.forEach(title => {
         title.style.color = "red";
     });
 });
+const audioPlayers = document.querySelectorAll('.audio-player');
+
+audioPlayers.forEach((audio) => {
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+});
+
+function handlePlay(event) {
+    const currentAudio = event.target;
+    audioPlayers.forEach((audio) => {
+        if (audio !== currentAudio) {
+            audio.pause();
+        }
+    });
+}
+
+function handlePause(event) {
+    const currentAudio = event.target;
+    const isPaused = currentAudio.paused;
+    if (!isPaused) {
+        currentAudio.pause();
+    }
+}
