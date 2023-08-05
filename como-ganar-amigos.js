@@ -33,3 +33,18 @@ audios.forEach((audio, index) => {
         }
     });
 });
+
+const audioPlayers = document.querySelectorAll('.audio-section audio');
+
+audioPlayers.forEach((audio) => {
+    audio.addEventListener('play', handlePlay);
+});
+
+function handlePlay(event) {
+    const currentAudio = event.target;
+    audioPlayers.forEach((audio) => {
+        if (audio !== currentAudio && !audio.paused) {
+            audio.pause();
+        }
+    });
+}
