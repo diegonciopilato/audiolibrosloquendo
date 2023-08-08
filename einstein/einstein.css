@@ -1,0 +1,409 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(einsteinwall.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    margin: 5px 310px;
+    border-radius: 10px;
+    position: relative;
+    ;
+}
+.header-container {
+    width: 100%; /* Cambia el ancho para que ocupe todo el ancho de la página */
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: rgba(220, 220, 220, 0.8); /* Plomo suave como fondo del menú */
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+nav li {
+    margin-right: 7px; /* Ajusta el espacio entre botones */
+    padding: 0px 46px; /* Espacio interno del botón para centrar el texto */
+    position: relative;
+}
+
+nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Ajusta la posición vertical de la línea */
+    bottom: -10px; /* Ajusta la posición vertical de la línea */
+    right: 0;
+    width: 1px;
+    background-color: gray; /* Plomo suave para la línea vertical */
+}
+
+nav a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilos del botón activo (Home) */
+nav a.active {
+    color: white; /* Color blanco para el texto del botón activo */
+    background-color: white; /* Color blanco para el fondo del botón activo */
+    border-radius: 10px;
+}
+
+/* Estilos para los botones no activos */
+nav li:not(:first-child) a {
+    background-color: rgba(255, 255, 255, 0.322); /* Blanco más transparente para el fondo de los botones no activos */
+    border-radius: 10px;
+}
+
+/* Estilos del botón extendido */
+nav li:nth-last-child(2) {
+    margin-right: 302px; /* Alinea el penúltimo botón a la izquierda */
+}
+
+/* Estilos del menú activo */
+nav a.active {
+    padding: 5px 10px;
+}
+
+.main-content {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3px;
+    color: red;
+    max-width: 1200px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.book-post {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px 30px; /* Ajustamos el espacio entre el contenido del libro y el Article Archive */
+    flex: 1; /* Hacemos que el contenido del libro ocupe todo el espacio disponible */
+}
+
+.book-cover {
+
+    margin-left: -10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+ 
+    padding: 30px;
+    width: 250px;
+    height: 32260px;
+    
+}
+
+.book-details {
+    margin-left: -50px; /* Elimina el margen derecho */
+    height: 32260px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+
+  
+    width: calc(55% - 100px); /* Aquí asumí que el ancho del .book-archive es de 200px, si es diferente, ajústalo */
+    padding: 33px;
+}
+
+/* Ajustamos el diseño del contenido del libro */
+.book-details h2 {
+    margin-top: 4px;
+    /*color: red;*/
+
+    text-decoration: none;
+
+    /* background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 para el título */
+    padding: -100px;
+
+    border-radius: 10px;
+}
+
+.texto2-section {
+    position: absolute;
+    margin-top: 9px;
+    top: 713px; /* Ajusta la posición vertical según tus necesidades */
+    left: 30px; /* Ajusta la posición horizontal según tus necesidades */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 10px;
+    padding: 1px 20px; /* Reducir el valor del padding-top a 10px */
+    width: 68.2%; /* Asegura que la sección ocupe todo el ancho disponible */
+    /* Otros estilos para la sección .texto2-section aquí */
+}
+
+img.specific-image {
+    padding-left: 258px; /* Ajusta el valor del padding según el espacio que desees agregar */
+    padding-bottom: -83px;
+  }
+
+
+.audio-section audio {
+
+    width: 100%; /* Establece el ancho del reproductor al 100% del contenedor */
+    margin-left: -5px; /* Elimina el margen derecho */
+    margin-right: -12px; /* Elimina el margen derecho */
+
+}
+
+
+
+.book-archive {
+    width: 220px; /* Puedes ajustar el ancho del menú según tus preferencias */
+    padding: 20px;
+    color: red;
+    border-radius: 5px;
+    /* Eliminamos el fondo del .book-archive */
+    
+    /* Ajusta los márgenes derecho e izquierdo según tus preferencias */
+    margin-left: -33px;
+    margin-right: 43px;
+}
+
+
+.book-archive h3 {
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.book-archive ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-archive li {
+    margin-bottom: 10px;
+}
+
+.book-archive a {
+    text-decoration: none;
+    color: red;
+}
+
+/* Estilos específicos para la página principal */
+
+body.home {
+    background-color: rgba(255, 255, 240, 0.8);
+}
+
+nav.home ul {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+nav.home a.active {
+    background-color: #fff;
+    color: red;
+}
+
+/* Estilos de la portada */
+
+/* Estilos de la portada */
+.portada {
+    width: 100%;
+    height: 209px;
+    background-image: url(../ruta-a-imagen-portada.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 0px; /* Eliminamos el margen inferior para reducir el espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+}
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url(einsteinwall.jpg);
+        background-repeat: repeat;
+        background-size: auto;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+
+        border-radius: 10px;
+        position: relative;
+
+    }
+    /* Aquí colocas los estilos específicos para dispositivos móviles */
+    
+ 
+     .header-container {
+         width: 90%; /* Cambia el ancho para que ocupe todo el ancho de la página */
+         padding: 220px;
+ 
+     }
+     
+     nav ul {
+         display: flex;
+         list-style: none;
+         background-color: rgba(220, 220, 220, 0.8); /* Plomo suave como fondo del menú */
+         margin-top: -2px;
+         margin-left: 7px;
+         margin-right: 7px;
+ 
+         justify-content: center; /* Centra los botones horizontalmente */
+         transform: scale(0.5); 
+     }
+     
+     nav li {
+         margin-right: 25px; /* Ajusta el espacio entre botones */
+         padding-right: 0px 2px; /* Espacio interno del botón para centrar el texto */
+         justify-content: center;
+     }
+     
+     nav a {
+         text-decoration: none;
+         color: red;
+         font-weight: bold;
+         margin-right: -42px
+     }
+     nav li:nth-last-child(2) {
+         display: none;
+     }
+     nav li:not(:last-child)::after {
+         content: "";
+         position: absolute;
+         top: -10px; /* Ajusta la posición vertical de la línea */
+         bottom: -10px; /* Ajusta la posición vertical de la línea */
+         right: -30px;
+         width: 1px;
+         background-color: gray; /* Plomo suave para la línea vertical */
+     }
+     /* Por ejemplo, podrías ajustar tamaños de fuentes, márgenes, padding, etc. */
+     body {
+         font-size: 16px;
+         
+     }
+     .book-cover {
+         transform: scale(0.4); 
+         margin-top: -821px;
+         margin-right: -10px;
+         margin-left: -30px;
+         height: 2604px;
+     }
+    
+     .book-details {
+     margin-left: -280px; /* Elimina el margen derecho */
+     height: px;
+     margin-top: -2353px;
+     color: #333;
+     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
+     border-radius: 10px;
+     border-top-left-radius: 0px;
+     
+
+     margin-right:-90px;
+     transform: scale(0.4); 
+     width: 462px;
+     padding: -102px;
+     margin-top: -1438px;
+        }
+     
+ 
+     /* Ajustamos el diseño del contenido del libro */
+     .book-details h2 {
+         margin-top: 4px;
+         color: red;
+         text-decoration: none;
+         transition: color 0.3s;
+         /* background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 para el título */
+         padding: -100px;
+
+
+         border-radius: 10px;
+     }
+ 
+     /* Ajustamos el diseño del contenido del libro */
+     img.specific-image {
+        padding-left: 258px; /* Ajusta el valor del padding según el espacio que desees agregar */
+        padding-bottom: -83px;
+        transform: scale(1);
+        margin-left: -150px;
+        justify-content: center;
+        align-items: center;
+      }
+    
+     
+     .container {
+         margin: 10px; /* Puedes ajustar los márgenes para pantallas más pequeñas */
+     }
+     .book-archive {
+         display: none;
+ 
+     }
+     .texto2-section {
+        position: absolute;
+        margin-top: 9px;
+        
+        top: 1793px; /* Ajusta la posición vertical según tus necesidades */
+        left: -10px; /* Ajusta la posición horizontal según tus necesidades */
+        background-color: rgba(255, 255, 255, 0.9);
+        color: black;
+        border-radius: 10px;
+        transform: scale(1.6); 
+        padding: 1px 20px; /* Reducir el valor del padding-top a 10px */
+        width: 68.2%; /* Asegura que la sección ocupe todo el ancho disponible */
+        margin-top: 10450px;
+        margin-left: -150px;
+        margin-top: 8128px;
+
+
+        /* Otros estilos para la sección .texto2-section aquí */
+    }
+     .audio-section audio {
+
+        width: 136%; /* Establece el ancho del reproductor al 100% del contenedor */
+        margin-left: -13px; /* Elimina el margen derecho */
+        margin-right: -12px; /* Elimina el margen derecho */
+    
+    }
+    
+     .portada {
+  
+         background-size: cover;
+         background-position: -27px center;
+         width: 100%;
+         height: 69px;
+         
+     /* ... Otros estilos para dispositivos móviles ... */
+} 
+ 
+ 
+ 
+ }
