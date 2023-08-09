@@ -1,332 +1,181 @@
-/* Estilos generales */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url(ruta-a-imagen-wallpaper.jpg);
-
-    background-repeat: repeat;
-    background-size: auto;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    margin: 5px 310px ;
-    border-radius: 10px;
-    position: relative;
-}
-
-.header-container {
-    width: 100%; /* Cambia el ancho para que ocupe todo el ancho de la página */
-    padding: 20px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    background-color: rgba(220, 220, 220, 0.8); /* Plomo suave como fondo del menú */
-    padding: 10px;
-    border-radius: 10px;
-    justify-content: center; /* Centra los botones horizontalmente */
-}
-
-nav li {
-    margin-right: 7px; /* Ajusta el espacio entre botones */
-    padding: 0px 46px; /* Espacio interno del botón para centrar el texto */
-    position: relative;
-}
-
-nav li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: -10px; /* Ajusta la posición vertical de la línea */
-    bottom: -10px; /* Ajusta la posición vertical de la línea */
-    right: 0;
-    width: 1px;
-    background-color: gray; /* Plomo suave para la línea vertical */
-}
-
-nav a {
-    text-decoration: none;
-    color: red;
-    font-weight: bold;
-}
-
-/* Estilos del botón activo (Home) */
-nav a.active {
-    color: white; /* Color blanco para el texto del botón activo */
-    background-color: white; /* Color blanco para el fondo del botón activo */
-    border-radius: 10px;
-}
-
-/* Estilos para los botones no activos */
-nav li:not(:first-child) a {
-    background-color: rgba(255, 255, 255, 0.322); /* Blanco más transparente para el fondo de los botones no activos */
-    border-radius: 10px;
-}
-
-/* Estilos del botón extendido */
-nav li:nth-last-child(2) {
-    margin-right: 302px; /* Alinea el penúltimo botón a la izquierda */
-}
-
-/* Estilos del menú activo */
-nav a.active {
-    padding: 5px 10px;
-}
-
-.main-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 3px;
-    color: red;
-    max-width: 1200px;
-    border-radius: 10px;
-    gap: 20px;
-}
-
-.book-post {
-
-    display: flex;
-    align-items: flex-start;
-    gap: 10px 30px; /* Ajustamos el espacio entre el contenido del libro y el Article Archive */
-    flex: 1; /* Hacemos que el contenido del libro ocupe todo el espacio disponible */
-}
-
-.book-cover {
-
-    margin-left: -10px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    position: relative; /* Añadimos posición relativa para que podamos superponer elementos */
-    z-index: 1; /* Aseguramos que la imagen del libro esté delante del contenido */
-    background-position: center center;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
-    border-radius: 10px;
-    border-top-right-radius: 0px;
- 
-    padding: 30px;
-    width: 250px;
-    height: 3040px;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href=".//logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-}
+    <title>Audiolibros Loquendo</title>
+    <link rel="stylesheet" href="homecss.css">
+</head>
+<body>
+    <div class="container">
+        <header class="portada">
+        </header> 
+        <nav class="home">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="conversor.html">Conversor</a></li>
+                <li><a href="subir.html">Subir</a></li>
+                <li><a href="peticiones.html">Peticiones</a></li>
+                <li><a href="">   </a></li>
+            </ul>
+        </nav>
 
-.book-details {
-    margin-left: -50px; /* Elimina el margen derecho */
+        <div class="main-content">
+            <div class="book-post">
+                <div class="book-cover">
+                    <img src="einstein/einstein.jpg">
+                    <img src="ganar-amigos/libro2.jpg"alt="Portada del libro" style="margin: 40px 0 0 0;">
+                    <img src="psicologia oscura/libro.jpg"alt="Portada del libro" style="margin: 40px 0 0 0;">
+                    <img src="steve jobs/steve-jobs.jpg"alt="Portada del libro" style="margin: 40px 0 0 0;">
+                    <img src="cero-uno/cero-uno.jpg"alt="Portada del libro" style="margin: 40px 0 0 0;">
+                    <img src="elon musk/elon-musk.jpg"alt="Portada del libro" style="margin: 40px 0 0 0;">
+                    
+                    <img src="ruta-a-imagen-del-libro.jpg"alt="Portada del libro" style="margin: 40px 0 0 0;">
+                </div>
+                <div class="book-details">
+                    <br>
+                        <h2><a href="einstein/einstein.html"> </a></h2>
+                        <h2><a href="einstein/einstein.html">Einstein - Walter Isaacson
+                        </a></h2>
+                        <p>
+                            Número uno en ventas en Estados Unidos durante varias semanas, esta es la primera biografía de Einstein 
+                            publicada tras la apertura de todos sus archivos. ¿Cómo llegó Einstein a convertirse en una de las mentes
+                             más deslumbrantes de la historia moderna, en el descifrador de los secretos del cosmos? Según Walter Isaacson, 
+                             la respuesta está en su actitud crítica, en su rebeldía ante las verdades impuestas y en su insaciable curiosidad, rasgos que también determinaron sus complicadas relaciones sentimentales y familiares. La vida de Einstein es un ejemplo fascinante de la relación entre la creatividad y la libertad.
+                            <br>
+                             Premiada y elogiada por la crítica, esta es la biografía definitiva de Einstein. Se trata de la primera aproximación biográfica al 
+                            gran genio de la física,escrita tras la apertura de todos sus archivos personales. Una obra completa,amena y rigurosa,en la mejor línea de la escuela angloamericana de grandes biografías.
+                            </p>
+                            <br><br><br><br><br><br><br>
+                    <h2><a href="ganar-amigos/como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas</a></h2>
+                    <p>
+                        Convertido en un clásico de las relaciones humanas, los sólidos principios enunciados en 
+                        Cómo ganar amigos no han sido aún superados. Aplicando su gran conocimiento de las personas, 
+                        dotes de observación y experiencia profesional.
+                        Carnegie consiguió crear un tratado de psicología cotidiana que es el origen del marketing 
+                        moderno.
+                        <br>
+                        Con más de 15 millones de ejemplares vendidos, Cómo ganar amigos ha ayudado a miles de
+                         personas a alcanzar el éxito en su vida personal y profesional.
+                         <br>
+                         Este libro sólo será susceptible de cambiarte la vida si cumples este requisito mágico: 
+                         “tener un profundo e impulsivo deseo de aprender a aumentar tu capacidad para tratar con los demás”
+                    <br> <br><br><br><br><br><br><br><br><br>
+                    <h2><a href="psicologia oscura/psicologia-oscura.html">Psicología Oscura
+                    </a></h2>
+                    <p>Aprenda los Usos Prácticos y las Defensas de la
+                        Manipulación, la Influencia Emocional, la Persuasión,
+                        el Engaño, el Control Mental, la PNL Encubierta, el
+                        Lavado de Cerebro y otras Técnicas Secretas
+                        </p>
+                        <br><br><br><br><br><br><br>
+                        <h2 style="margin-top: 207px;"><a href="404.jpg"> </a></h2>
+                        <h2><a href="404.jpg">Steve Jobs - Walter Isaacson
+                        </a></h2>
+                        <p>
+                            Walter Isaacson nos presenta la única biografía escrita con la colaboración de Jobs,
+                            el retrato definitivo de uno de los iconos indiscutibles de nuestro tiempo, la crónica de la agitada 
+                            vida y abrasiva personalidad del genio cuya creatividad, energía y afán de perfeccionismo revolucionaron
+                            seis industrias: la informática, el cine de animación, la música, la telefonía, las tabletas y 
+                            la edición digital.
+                            <br>
+                            Consciente de que la mejor manera de crear valor en el siglo XXI es conectar 
+                            la creatividad con la tecnología, Jobs fundó una empresa en la que impresionantes saltos de la 
+                            imaginación van de la mano de asombrosos logros tecnológicos.Jobs habla con una sinceridad a veces 
+                            brutal sobre la gente con la 
+                            que ha trabajado y contra la que ha competido. 
+                            <br>
+                            De igual modo, sus amigos, rivales y colegas
+                            ofrecen una visión sin edulcorar de las pasiones, los demonios, el perfeccionismo, los deseos, 
+                            el talento, los trucos y la obsesión por controlarlo todo que modelaron su visión empresarial 
+                            y los innovadores productos que logró crear.
+                            Su historia, por tanto, está llena de enseñanzas 
+                            sobre innovación, carácter, liderazgo y valores. 
+                            La vida de un genio capaz de enfurecer y seducir a partes iguales.
+                            </p>
 
-    height: 3067px;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-  
-    width: calc(100% - 100px); /* Aquí asumí que el ancho del .book-archive es de 200px, si es diferente, ajústalo */
-    padding: 33px ;
-    padding-top: 0px;
-}
+                        <h2 style="margin-top: 70px;"><a href="cero-uno/de-cero-a-uno.html"> </a></h2>
+                        <h2><a href="cero-uno/cero-uno/de-cero-a-uno.html">De Cero A Uno - Peter Thiel
+                        </a></h2>
+                        <p>
+                            El próximo Bill Gates no diseñará un sistema operativo. Los próximos Larry Page 
+                            o Sergey Brin no crearán un motor de búsqueda. Y el siguiente Mark Zuckerberg no inventará una 
+                            red social. Si vas a copiar a estos chicos, es que no has aprendido de ellos.
+                            <br>
+                            Hacer lo que ya sabemos lleva al mundo de 1 a n. Genera un progreso horizontal añadiendo más de lo mismo. 
+                            Cada nueva creación, sin embargo, va de 0 a 1, es vertical e implica hacer algo que nadie ha hecho antes.
+                             Si coges una máquina de escribir y construyes cien, has hecho un progreso horizontal. 
+                             Si coges una máquina de escribir y construyes un procesador de textos, has hecho un progreso vertical. 
+                             Este libro trata de cómo llegar allí.
+                            </p>
+                        <h2 style="margin-top: 222px;"><a href="elon musk/elonmusk.html"> </a></h2>
+                        <h2><a href="elon musk/elonmusk.html">Elon Musk: El empresario que anticipa el futuro
+                        </a></h2>
+                        <p>
+                            Esta es una mirada compleja a un hombre complejo, una moderna combinación de Thomas Edison, Henry Ford, 
+                            Howard Hughes y Steve Jobs. Su nombre es Elon Musk, y es el empresario que está detrás de Tesla Motors, 
+                            SpaceX y SolarCity, empresas innovadoras en sus respectivos campos ?la automovilística, la aeronáutica y 
+                            la energía? con las que Musk está consiguiendo hacer realidad lo que hasta hace poco no era más que 
+                            ciencia ficción
+                            <br>
+                            Vendió la primera empresa que creó, Zip2, 
+                             por 300 millones de dólares, y la segunda PayPal, por 1.500. A partir de ese momento, empezó a soñar a lo 
+                             grande: coches eléctricos a precios asequibles, cohetes espaciales, colonias en Marte, un tren capaz de 
+                             circular a 1.200 kilómetros por hora, baterías de litio en las que almacenar energía y poder prescindir 
+                             de las eléctricas?
+                             <br>
+                            Esta es la verdadera historia de la tumultuosa ascensión a las cumbres del mundo empresarial de Musk, un 
+                            hombre que ha revolucionado la industria americana y ha roto todos los límites de la innovación, ganándose 
+                            inevitablemente unos cuantos enemigos por el camino. Más que un inventor, más que un pensador, más que un
+                             genio, Musk es el perfecto ejemplo del emprendedor que persigue cambiar nuestra vida cotidiana hasta 
+                             extremos que todavía no somos capaces de imaginar.
+                            </p>
+                        
+                        <h2 style="margin-top: 47px;"><a href="ruta-a-imagen-portada.jpg"> </a></h2>
+                    <h2><a href="ruta-a-imagen-portada.jpg">El método Lean Startup
+                    </a></h2>
+                    <p>
+                         El método Lean Startup supone un nuevo enfoque que se está adoptando en todo el mundo 
+                         para cambiar la forma en que las empresas crean y lanzan sus productos.
+                         <br>
+                         Eric Ries define una startup como una organización dedicada a crear algo bajo condiciones 
+                         de incertidumbre extrema. 
+                         Esto se cumple tanto para aquellas personas que trabajan en el garaje de su casa como para 
+                         un grupo de profesionales experimentados de una de las empresas que
+                         aparecen en el ranking de la revista Fortune.
+                         <br>
+                         Lo que todos ellos tienen en común es la misión de traspasar la incertidumbre para encontrar el camino hacia un negocio sostenible.
+                         <br>
+                         El método Lean Startup es un conjunto de prácticas pensadas para ayudar a los
+                         emprendedores a incrementar las probabilidades de crear una startup con éxito. No es
+                         una fórmula matemática infalible, sino una filosofía empresarial innovadora que ayuda a
+                         los emprendedores a escapar de las trampas del pensamiento empresarial tradicional.
+                         
+                        </p>
+                        la constitucion o la creacion de un significa es estetica contingente, y las variables
+                </div>
+                
+            </div>
+        
+            <!-- Otras publicaciones de libros aquí -->
+        
+            <aside class="book-archive">
+                <h3>ARTICLE ARCHIVE</h3>
+                <ul>
+                    <li><a href="#">Clásicos</a></li>
+                    <li><a href="#">Biografías</a></li>
+                    <li><a href="#">Filosofía</a></li>
+                    <li><a href="#">Ciencia y Ficción</a></li>
+                    <li><a href="#">Ciencia</a></li>
+                    <li><a href="#">Economía</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
 
-
-.book-details h2:hover {
-    color: #c0c000;
-    
-}
-
-.book-archive {
-    width: 220px; /* Puedes ajustar el ancho del menú según tus preferencias */
-    padding: 20px;
-    color: red;
-    border-radius: 5px;
-    /* Eliminamos el fondo del .book-archive */
-    
-    /* Ajusta los márgenes derecho e izquierdo según tus preferencias */
-    margin-left: -23px;
-    margin-right: 43px;
-}
-
-
-.book-archive h3 {
-    color: #444;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.book-archive h3 {
-    color: #444;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-
-
-.book-archive ul {
-    list-style: none;
-    padding: 0;
-}
-
-.book-archive li {
-    margin-bottom: 10px;
-}
-
-.book-archive a {
-    text-decoration: none;
-    color: red;
-}
-
-/* Estilos específicos para la página principal */
-
-body.home {
-    background-color: rgba(255, 255, 240, 0.8);
-}
-
-nav.home ul {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-nav.home a.active {
-    background-color: #fff;
-    color: red;
-}
-
-/* Estilos de la portada */
-.portada {
-    width: 100%;
-    height: 209px;
-    background-image: url(ruta-a-imagen-portada.jpg);
-    background-size: cover;
-    border-radius: 10px;
-    margin-bottom: 0px; /* Eliminamos el margen inferior para reducir el espacio */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-
-}
-@media only screen and (max-width: 1600px) {
-    /* Aquí colocas los estilos específicos para dispositivos móviles */
-    .container {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     background-color: rgba(255, 255, 255, 0.9);
-     padding: 10px;
-     max-width: 340px; /* Ajusta el ancho máximo según tus necesidades */
-     margin: 0 auto; /* Centra el contenedor horizontalmente con margen automático */
-     border-radius: 10px;
-      margin-left: 23px;
- 
- }
- 
-     .header-container {
-         width: 00%; /* Cambia el ancho para que ocupe todo el ancho de la página */
-         padding: 20px;
- 
-     }
-     
-     nav ul {
-         display: flex;
-         list-style: none;
-         background-color: rgba(220, 220, 220, 0.8); /* Plomo suave como fondo del menú */
-         margin-top: -2px;
-         margin-left: 7px;
-         margin-right: 7px;
- 
-         justify-content: center; /* Centra los botones horizontalmente */
-         transform: scale(0.5); 
-     }
-     
-     nav li {
-         margin-right: 25px; /* Ajusta el espacio entre botones */
-         padding-right: 0px 2px; /* Espacio interno del botón para centrar el texto */
-         justify-content: center;
-     }
-     
-     nav a {
-         text-decoration: none;
-         color: red;
-         font-weight: bold;
-         margin-right: -42px
-     }
-     nav li:nth-last-child(2) {
-         display: none;
-     }
-     nav li:not(:last-child)::after {
-         content: "";
-         position: absolute;
-         top: -10px; /* Ajusta la posición vertical de la línea */
-         bottom: -10px; /* Ajusta la posición vertical de la línea */
-         right: -30px;
-         width: 1px;
-         background-color: gray; /* Plomo suave para la línea vertical */
-     }
-     /* Por ejemplo, podrías ajustar tamaños de fuentes, márgenes, padding, etc. */
-     body {
-         font-size: 16px;
-     }
-     .book-cover {
-         transform: scale(0.4); 
-         margin-top: -821px;
-         margin-right: -10px;
-         margin-left: -30px;
- 
-     }
-    
-     .book-details {
-     margin-left: -280px; /* Elimina el margen derecho */
- 
-     height: 2604px;
-     margin-top: -821px;
-     color: #333;
-     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 */
-     border-radius: 10px;
-     border-top-left-radius: 0px;
-    
-     margin-right:-90px;
-     transform: scale(0.4); 
-     width: 462px;
-     padding: -102px
-        }
-     
- 
-     /* Ajustamos el diseño del contenido del libro */
-     .book-details h2 {
-         margin-top: 4px;
-         color: red;
-         text-decoration: none;
-         transition: color 0.3s;
-         /* background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco 2 para el título */
-         padding: -100px;
- 
-         border-radius: 10px;
-     }
- 
-     /* Ajustamos el diseño del contenido del libro */
- 
-     
-     .container {
-         margin: 5px; /* Puedes ajustar los márgenes para pantallas más pequeñas */
-     }
-     .book-archive {
-         display: none;
- 
-     }
-     .portada {
-  
-         background-size: cover;
-         background-position: -27px center;
-         width: 100%;
-         height: 69px;
-         
-     /* ... Otros estilos para dispositivos móviles ... */
-} 
- 
- 
- 
- }
+    <script src="homejs.js"></script>
+</body>
+</html>
